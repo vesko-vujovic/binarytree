@@ -1,4 +1,4 @@
 # Binary Tree
-Implementation of Binary tree in JavaScript by Vesko Vujovic
+Implementation of Binary tree in JavaScript 
 
 
