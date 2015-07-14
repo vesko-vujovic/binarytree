@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="binaryTree.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1> Binary search tree</h1>
+<script>
+    var nums = new BST();
+    nums.insert(23);
+    nums.insert(29);
+    nums.insert(1);
+    nums.insert(4);
+    nums.insert(56);
+    nums.insert(50);
+    nums.insert(62);
+    nums.insert(2);
+    nums.insert(9);
+    inOrderTraversal(nums.root);
+    preOrderTraversal(nums.root);
+    postOrderTraversal(nums.root);
+    var minimum     = nums.getMinimum();
+    var maximum     = nums.getMaximum();
+    var find        = nums.findNode(62);
+    var removeNode  = nums.remove(4);
+    inOrderTraversal(nums.root);
+    var remove      = nodes.splice(1,9);
+
+    $(document).ready(function(){
+
+        $("#nodes").append(nodes.join(", "));
+        $("#nodes2").append(nodes2.join(", "));
+        $("#nodes3").append(nodes3.join(", "));
+        $("#getMin").append(minimum);
+        $("#getMax").append(maximum);
+        $("#find").append(find);
+        $("#remove").append(nodes.join(","));
+
+    });
+
+</script>
+<h2> This is an example how our function traverse the tree </h2>
+ <p>
+     INSERTING THE NODES:
+     nums.insert(23);
+     nums.insert(29);
+     nums.insert(1);
+     nums.insert(4);
+     nums.insert(56);
+     nums.insert(50);
+     nums.insert(62);
+     nums.insert(2);
+     nums.insert(9);
+
+ </p>
+ <h3> InorderTraversal: <span id="nodes"> </span>  </h3>
+ <h3> preOrderTraversal: <span id="nodes2"> </span>  </h3>
+ <h3> postOrderTraversal: <span id="nodes3"> </span>  </h3>
+ <h3> Get minimum node in Tree: <span id="getMin"> </span>  </h3>
+ <h3> Get maximum node in Tree: <span id="getMax"> </span>  </h3>
+<h3> Find: nums.findNode(62) <span id="find"> </span>  </h3>
+<h3> Removed node: (4): <span id="remove"> </span></h3>
+
+
+
+</body>
+</html>
